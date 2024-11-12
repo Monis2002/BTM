@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Log In</h1>
+
+                    <p class="lead fw-normal text-white-50 mb-0">
+                    Let's Login to BTM account
+                    </p>
+                </div>
+            </div>
+        </header>
+        <br><br>
+        <div class="'container">
+            <div class="row">
+                <center>
+                    <div class="col-8">
+                        <br><br>
+
+                      <form method="POST" action="{% url 'login' %}">
+                      {% csrf_token %}
+  <div>
+    <label for="staticEmail2">Username:</label>
+    <input type="text" name="username" id="staticEmail2" placeholder="Enter your username">
+  </div>
+  <div>
+    <label for="inputPassword2">Password:</label>
+    <input type="password" name="password" id="inputPassword2" placeholder="Enter your password">
+  </div>
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>
+
+
+
+                    </div>
+                </center>
+
+            </div>
+
+        </div>
+        <br><br>
+{% endblock %}
